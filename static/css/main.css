@@ -11,14 +11,25 @@ body {
 .slide-image {
     width: 100%;
 }
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .carousel-holder {
     margin-bottom: 30px;
+    display: table; margin: 0 auto;
 }
 
 .carousel-control,
 .item {
     border-radius: 4px;
+    display: table; margin: 0 auto;
 }
 
 .caption {

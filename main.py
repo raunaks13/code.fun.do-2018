@@ -6,11 +6,10 @@ app = Flask(__name__)
 def home():
   return render_template('index.html')
 
-<<<<<<< HEAD
-@app.route('handle_data', methods = ['POST'])
+@app.route('/handle_data', methods = ['POST'])
 def handle_data():
     text = request.form['form_input']
-    
+
     print("inside python script")
 
     client = textapi.Client("001761ba", "dd668154d01ac3ec48250a068538aa9a")
@@ -38,12 +37,6 @@ def handle_data():
 # process = subprocess.Popen(['python' , 'summarize.py' ], stdout=subprocess.PIPE)
 # out, err = process.communicate()
 # print(out)
-=======
-@app.route('/handle_data', methods = ['POST'])
-def handle_data():
- 	text = request.form['form_input']
- 	print(text)
->>>>>>> 97ee09e3588ebd6c9884c77d1bedc33f98fe5e0d
 
 #@app.route('/getconfig', methods=['GET', 'POST'])
 #def config():

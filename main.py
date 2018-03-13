@@ -10,6 +10,11 @@ app = Flask(__name__)
 def home():
   return render_template('index.html')
 
+@app.route('/handle_data', methods = ['POST'])
+def handle_data():
+ 	text = request.form['form_input']
+ 	print(text)
+
 #@app.route('/getconfig', methods=['GET', 'POST'])
 #def config():
 #    value = request.form['config']

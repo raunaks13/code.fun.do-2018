@@ -78,7 +78,10 @@
               <div class="row">
                 <div class="col-md">
                   <div class="form-group">
-                    <textarea name="Text1" cols="125" rows="5"></textarea>
+                    <form action="{{ url_for('handle_data') }}" method="post">
+                      <input type="text" name="form_input">
+                        <input type="submit">
+                      </form>
                   </div>
                 </div>
               </div>

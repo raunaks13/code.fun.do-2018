@@ -26,7 +26,7 @@ def summarize():
     for sentence in summary['sentences']:
         # print(sentence)
         f2.write('\n' + sentence)
-        total_summary = total_summary + sentence
+        total_summary = total_summary + "\n" + sentence
     f2.close()
 
     # print(total_summary)
@@ -43,6 +43,7 @@ def query():
     file = open(os.getcwd() + "/tmp.jsonl", "w+")
     file.write(str(jsonString));
     file.close()
+
     subprocess.call(["python3.6", "-m", "allennlp.run", "predict", "bidaf-model-2017.09.15-charpad.tar.gz", os.getcwd() + "/tmp.jsonl"])
 
     return render_template('index.html')

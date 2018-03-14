@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, json
 import os
 import io
 import sys
-from aylien-apiclient import textapi
+from aylienapiclient import textapi
 
 app = Flask(__name__)
 

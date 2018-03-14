@@ -10,10 +10,10 @@ app = Flask(__name__)
 def home():
   return render_template('index.html')
 
-@app.route('/handle_data', methods = ['POST'])
-def handle_data():
+@app.route('/summarize', methods = ['POST'])
+def summarize():
     text = request.form['form_input']
-    print("FORM HAS BEEN PROCESSED")
+    print(text)
 
     client = textapi.Client("001761ba", "dd668154d01ac3ec48250a068538aa9a")
 
@@ -22,9 +22,28 @@ def handle_data():
 
     f2 = open(os.getcwd()+'/summary.txt','w')
 
+    total_summary = ""
     for sentence in summary['sentences']:
+        # print(sentence)
         f2.write('\n' + sentence)
+        total_summary = total_summary + sentence
     f2.close()
+
+    # print(total_summary)
+    return render_template('index.html', summary=total_summary)
+    # return total_summary
+
+@app.route('/query', methods = ['POST'])
+def query():
+    import subprocess
+    text = request.form['form_input']
+    query = request.form['query']
+    jsonString = "{\"passage\":\"" + text + "\", \"question\":\"" + query + "\"}"
+    print(jsonString)
+    file = open(os.getcwd() + "/tmp.jsonl", "w+")
+    file.write(str(jsonString));
+    file.close()
+    subprocess.call(["python3.6", "-m", "allennlp.run", "predict", "bidaf-model-2017.09.15-charpad.tar.gz", os.getcwd() + "/tmp.jsonl"])
 
     return render_template('index.html')
 

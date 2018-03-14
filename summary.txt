@@ -1,0 +1,26 @@
+
+ecoinvent: Terms of Use for ecoinvent Database and ecoinvent Datasets for end users and for end users of educational licences End User Licence Agreement (EULA) for ecoinvent Database and ecoinvent Datasets § 1 Preamble This EULA represents a contract between ecoinvent and you as an individual or legal person as end user or end user of an educational licence.
+Please read this EULA carefully before using any version of the ecoinvent Database or any ecoinvent Dataset.
+ecoinvent was founded by five Swiss research institutes as Verein (“association” according to Art. 60 ff.
+of the Swiss Civil Code, having its registered office in Zürich).
+LCI data means Life Cycle Inventory datasets, each representing the environmental data for a specific human activity.
+ecoinvent Database means the database containing ecoinvent Datasets.
+end user represents an individual or legal person using the ecoinvent Database or any ecoinvent Dataset as a single-user on an individual computer or as a multi-user on several individual computers or workstations.
+§ 3 Scope of this EULA and subject matter 1.
+The ecoinvent Database or any ecoinvent Dataset are solely owned by Licensor or any other Licensor’s data supplier.
+The ecoinvent Database as well as any ecoinvent Dataset are protected by national and international copyright laws and treaties.
+Licensor reserves all intellectual property rights, including copyrights and trademark rights.
+Subject to the terms of use set forth in this EULA, Licensor grants to Licensee the right to use the ecoinvent Database or an ecoinvent Dataset under the conditions as set hereinafter.
+The ecoinvent Database or an ecoinvent Dataset can also be granted with different license fees as a single-user licence on an individual computer or as a multi-user licence on several individual computers or workstations for non-commercial, academic use at Licensee's site.
+The payment for the transfer and use of the ecoinvent Database or ecoinvent Dataset of the respective version and licence type is subject to the price list valid at the time of the order or subject to a written agreement between Licensor / Reseller and Licensee regarding the price.
+b) end user of an educational licence 4.
+The granted licence is only valid for the current version of the ecoinvent Database or for a specific ecoinvent Dataset which has been purchased.
+Access to these data is granted as long as a specific version is offered as a licence by the ecoinvent Centre or a Reseller.
+Access to updates can only be obtained by continuous annual payment of the annual maintenance fee or by purchase of a new license.
+§ 6 Rights of Licensee 1.
+a) End user: 2.
+As a single-user licence, end user is granted a non-exclusive licence that may be assigned to use the licensed version of the ecoinvent Database on a single computer only as set forth in this EULA.
+End user of an educational licence is granted a non-exclusive licence to use the current educational version of the ecoinvent Database on one or more computer(s) or workstations at the same University and to use it for an unlimited number of non-commercial, academic or educational LCA projects and reports.
+Data shall be quoted herein by attributing as source to the corresponding version of the ecoinvent Database or the ecoinvent Dataset.
+b.
+The use of a multi-user licence is connected and limited to a corresponding number of identified persons.

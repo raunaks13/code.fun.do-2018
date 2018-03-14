@@ -74,28 +74,30 @@
 
         <div class="row">
           <div class="col-md-8 pr-md-5 pr-sm-0 mb-4">
-            <!-- <form action="/handle_data"> -->
               <div class="row">
                 <div class="col-md">
                   <div class="form-group">
-                    <form id="form" action="/handle_data" method="POST">
-                    	<input id = "text" type="text" name="form_input">
-                		<input type="submit">
-                    </form>
+                    <form id="summarize" action="/summarize" method="POST">
+                    	<input id="text" type="text" name="form_input">
+                			<input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Summarize">
+										</form>
+										<form id="query" action="/query" method="POST">
+                    	<input id="text" type="text" name="form_input">
+											<input id="text" type="text" name="query">
+                			<input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Query">
+										</form>
+										{% if summary %}
+										<h1>Summary</h1>
+										<p>{{ summary }}</p>
+										{% elif queryresult %}
+										<h1>Query Result</h1>
+										<p>{{ queryresult }}</p>
+										{% endif %}
                   </div>
                 </div>
               </div>
-              <div class="form-group">
-                <input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Summarize">
-              </div>
-              <div class="form-group">
-                <input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Query">
-              </div>
-            <!-- </form> -->
           </div>
-
         </div>
-
       </div>
     </section>
     <!-- END section -->

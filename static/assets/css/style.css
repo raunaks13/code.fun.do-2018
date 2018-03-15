@@ -1019,6 +1019,10 @@ body {
 input, textarea, p {
   font-weight: 300; }
 
+.form-group, textarea {
+    resize: none;
+    overflow: scroll;
+}
 ::-moz-selection {
   background: #000;
   color: #fff; }

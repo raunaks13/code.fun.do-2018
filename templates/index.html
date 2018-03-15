@@ -35,26 +35,29 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 pr-md-5 pr-sm-0 mb-4">
-              <div class="row">
-                <div class="col-md-12">
-				  				<textarea rows = "10" cols = "120" resize = "none" name = "form_input" form = "summarize_text" placeholder="Enter Text Here..."></textarea>
-                  <form id="summarize_text" action="/summarize_text" method="POST">
-              			<input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Summarize">
-									</form>
-									<form id="summarize_pdf" action="/summarize_pdf" method="POST" enctype="multipart/form-data">
-										<input type="submit"class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Summarize PDF">
-										<input type="file" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Choose file" name="inputFile">
-									</form>
-									{% if summary %}
-									<h1>Summary</h1>
-									<p style = "text-align: justify">{{ summary|safe }}</p>
-									{% endif %}
-                </div>
+          <div class="col-md-12">
+	  				<textarea rows = "10" cols = "105" resize = "none" name = "form_input" form = "summarize_text" placeholder="Enter Text Here..."></textarea>
+            <form id="summarize_text" action="/summarize_text" method="POST">
+        			<input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Summarize Text">
+						</form>
+            <br>
+            <h3> OR </h3>
+            <br>
+						<form id="summarize_pdf" action="/summarize_pdf" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <input type="file" id="files" value="Choose file" name="inputFile" style="display: none">
+                <label for="files" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0"> Upload PDF </label>
+                <input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Summarize PDF">
               </div>
+						</form>
+						{% if summary %}
+            <br>
+						<h1>Summary</h1>
+						<p style = "text-align: justify">{{ summary|safe }}</p>
+						{% endif %}
           </div>
         </div>
-      </div>
+    </div>
     </section>
     <!-- END section -->
 

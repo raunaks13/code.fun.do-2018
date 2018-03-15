@@ -110,7 +110,7 @@
   color: rgba(0, 0, 0, 0.4); }
 
 .testimonial_v1 blockquote {
-  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.7;
   color: #495057; }
 
@@ -120,7 +120,7 @@
 
 .testimonial_v1.pb_quote_v1 .quote {
   font-size: 100px;
-  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   color: #adb5bd;
   line-height: 0;
   position: absolute;
@@ -135,7 +135,7 @@
 
 .testimonial_v1.pb_quote_v2 .quote {
   font-size: 150px;
-  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   color: #dee2e6;
   line-height: 0;
   top: 40px;
@@ -154,7 +154,7 @@
   margin-bottom: 0; }
 
 .testimonial_v2 blockquote {
-  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  font-family: "Montserrat", sans-serif;
   font-style: italic;
   font-size: 18px;
   line-height: 1.7;
@@ -212,13 +212,13 @@
     font-size: 70px; }
   .pb_feature-v1 .media-body,
   .pb_feature-v2 .media-body {
-    font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     color: #868e96; }
     .pb_feature-v1 .media-body .heading,
     .pb_feature-v2 .media-body .heading {
       font-size: 20px;
-      font-family: "Montserrat", Arial, sans-serif; }
+      font-family: "Montserrat" sans-serif; }
   .pb_feature-v1.pb_feature-circle,
   .pb_feature-v2.pb_feature-circle {
     /* circle with background color */ }
@@ -793,6 +793,13 @@ input, select, textarea {
   box-shadow: none !important;
   outline: none !important; }
 
+label {
+    /* Other styling.. */
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
 .btn-shadow-blue {
   -webkit-box-shadow: 0px 15px 28px -5px rgba(29, 130, 255, 0.45);
   -moz-box-shadow: 0px 15px 28px -5px rgba(29, 130, 255, 0.45);
@@ -1013,6 +1020,10 @@ html {
   overflow-x: hidden;
   font-size: 1em; }
 
+html, body{
+  margin: 0;
+  height: 100%;
+}
 body {
   font-family: "Montserrat"; }
 
@@ -1072,7 +1083,7 @@ a {
   left: 0;
   z-index: 100;
   width: 100%;
-  font-family: "Montserrat", Arial, sans-serif; }
+  font-family: "Montserrat", sans-serif; }
   .pb_navbar .navbar-toggler:active, .pb_navbar .navbar-toggler:focus {
     outline: none; }
   .pb_navbar > .container {
@@ -1713,4 +1724,6 @@ a {
 .overflow-hidden {
   overflow: hidden; }
 
-/*# sourceMappingURL=style.css.map */
+.hidden {
+  text: none;
+}

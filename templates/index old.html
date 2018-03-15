@@ -22,7 +22,28 @@
 	</head>
 	<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
-      <section class="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-3" style="background-image: url({{url_for('static', filename='assets/images/3.jpg') }})" id="section-home">
+    <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Paralegal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="ion-navicon"></i></span>
+        </button>
+        <!--<div class="collapse navbar-collapse" id="probootstrap-navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-why-us">Why</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-practicing-areas">Practicing Areas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-attorneys">Attorneys</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
+          </ul>
+        </div> -->
+      </div>
+    </nav>
+    <!-- END nav -->
+
+    <section class="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4" style="background-image: url({{url_for('static', filename='assets/images/3.jpg') }})" id="section-home">
       <div class="container">
         <div class="row align-items-center justify-content-end">
           <div class="col-md-6">
@@ -39,8 +60,6 @@
     <!-- END section -->
 
 
-
-
     <section class="pb_section" data-section="contact" id="section-contact">
       <div class="container">
 
@@ -50,26 +69,24 @@
           </div>
         </div>
 
-        <form action='/upload' method = "POST" enctype="multipart/form-data">
-          <div class="form-group">
-            <label for="inputFile">File Input</label>
-            <input type="file" name="inputFile">
-          <input type="submit" value="upload">
-        </form>
+
         <div class="row">
           <div class="col-md-8 pr-md-5 pr-sm-0 mb-4">
               <div class="row">
                 <div class="col-md">
                   <div class="form-group">
-                    <form id="summarize" action="/summarize" method="POST">
-                    	<input id="text" type="text" name="form_input">
+
+					  <textarea rows = "10" cols = "155" style = "resize:none" name = "form_input" form = "summarize" placeholder="Enter Text Here..."></textarea>
+
+                    		<form id="summarize" action="/summarize" method="POST">
+                    		<!--input id="text" type="text" name="form_input"-->
                 			<input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Summarize">
-										</form>
-										<form id="query" action="/query" method="POST">
-                    	<input id="text" type="text" name="form_input">
-											<input id="text" type="text" name="query">
-                			<input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Query">
-										</form>
+							</form>
+
+							<form id="query" action="/query" method="POST">
+								<input id="text" type="text" name="query">
+                				<input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2 p-3 rounded-0" value="Query">
+							</form>
 										{% if summary %}
 										<h1>Summary</h1>
 										<p>{{ summary }}</p>

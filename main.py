@@ -76,5 +76,10 @@ def compute_summary(text):
 
     return total_summary
 
+@app.route('/submit_rating', methods=['POST', 'GET'])
+def rating():
+    stars = request.form['stars']
+    return render_template('index.html')
+
 if __name__ == '__main__':
   app.run()

@@ -26,7 +26,6 @@ def allowed_file(filename):
 @app.route('/summarize_text', methods = ['POST'])
 def summarize_text():
     text = request.form['form_input']
-    print(str(request))
     return render_template('index.html', summary=compute_summary(text))
 
 @app.route('/summarize_pdf', methods=['POST', 'GET'])

@@ -58,10 +58,22 @@ def summary_pdf():
 def compute_summary(text):
     client = textapi.Client("001761ba", "dd668154d01ac3ec48250a068538aa9a")
     title = ''
-    summary = client.Summarize({'title':title,'text': text, 'sentences_percentage': 15})
+    summary = client.Summarize({'title':title,'text': text, 'sentences_percentage': 35})
     total_summary = ""
     for sentence in summary['sentences']:
-        total_summary = total_summary + "<br/><br/>" + sentence
+        import re
+        section_sign_code = u'\u00A7'
+
+        regex = r"^(( )*(\()?( )*([0-9]+|[a-z]|[A-Z])( )*(\)|\.))"
+        matches = re.finditer(regex, sentence)
+        offset = 0
+        for matchNum, match in enumerate(matches):
+            print(match.group())
+            offset = match.end()
+
+        total_summary = total_summary + "<br/>" + sentence[offset:].strip()
+        # total_summary = total_summary + "<br/></br>" + sentence
+
     return total_summary
 
 if __name__ == '__main__':

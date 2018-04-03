@@ -2,7 +2,7 @@
 
 We present ParaLegal, a web application designed to parse your legal documents and identify significant content within them.
 
-##Basic Functionality
+## Basic Functionality
 
 You have the option of submitting plaintext or a document in PDF format, whose summary we will display on the webpage.
 Our application supports the English, French, Spanish and German languages.
